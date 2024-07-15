@@ -41,7 +41,14 @@ export class CdkStack extends Stack {
         behaviors: [{
           isDefaultBehavior: true
         }]
-      }]
+      }],
+      errorConfigurations: [
+        {
+          errorCode: 403,
+          responseCode: 200,
+          responsePagePath: '/index.html',
+        }
+      ],
     });
 
     new s3Deploy.BucketDeployment(this, 'Aliaksei-Tsvirko-S3-Deploy-RS-2024', {
