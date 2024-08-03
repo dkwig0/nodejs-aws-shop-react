@@ -48,6 +48,7 @@ export const availableProducts: AvailableProduct[] = products.map(
 
 export const cart: CartItem[] = [
   {
+    product_id: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
     product: {
       description: "Short Product Description1",
       id: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
@@ -57,6 +58,7 @@ export const cart: CartItem[] = [
     count: 2,
   },
   {
+    product_id: "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
     product: {
       description: "Short Product Description7",
       id: "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
@@ -77,8 +79,26 @@ export const orders: Order[] = [
       comment: "",
     },
     items: [
-      { productId: "7567ec4b-b10c-48c5-9345-fc73c48a80aa", count: 2 },
-      { productId: "7567ec4b-b10c-45c5-9345-fc73c48a80a1", count: 5 },
+      {
+        productId: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
+        count: 2,
+        product: {
+          description: "Short Product Description7",
+          id: "77567ec4b-b10c-48c5-9345-fc73c48a80aa",
+          price: 15,
+          title: "ProductName",
+        },
+      },
+      {
+        productId: "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
+        count: 5,
+        product: {
+          description: "Short Product Description7",
+          id: "7567ec4b-b10c-45c5-9345-fc73c48a80a1",
+          price: 15,
+          title: "ProductName",
+        },
+      },
     ],
     statusHistory: [
       { status: OrderStatus.Open, timestamp: Date.now(), comment: "New order" },
@@ -92,7 +112,18 @@ export const orders: Order[] = [
       lastName: "Doe",
       comment: "Ship fast!",
     },
-    items: [{ productId: "7567ec4b-b10c-48c5-9345-fc73c48a80aa", count: 3 }],
+    items: [
+      {
+        productId: "7567ec4b-b10c-48c5-9345-fc73c48a80aa",
+        count: 3,
+        product: {
+          description: "Short Product Description7",
+          id: "77567ec4b-b10c-48c5-9345-fc73c48a80aa",
+          price: 15,
+          title: "ProductName",
+        }
+      }
+      ],
     statusHistory: [
       {
         status: OrderStatus.Sent,

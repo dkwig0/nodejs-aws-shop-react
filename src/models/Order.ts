@@ -1,5 +1,6 @@
 import * as Yup from "yup";
 import { OrderStatus } from "~/constants/order";
+import { ProductSchema } from "~/models/Product";
 
 export const AddressSchema = Yup.object({
   firstName: Yup.string().required().default(""),
@@ -12,6 +13,7 @@ export type Address = Yup.InferType<typeof AddressSchema>;
 
 export const OrderItemSchema = Yup.object({
   productId: Yup.string().required(),
+  product: ProductSchema.required(),
   count: Yup.number().integer().positive().required(),
 }).defined();
 
